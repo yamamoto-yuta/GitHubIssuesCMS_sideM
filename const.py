@@ -1,0 +1,20 @@
+ARTICLE_FLAG_LABEL = 'article'
+DELETE_FLAG_LABEL = 'delete'
+PROFILE_FLAG_LABEL = 'profile'
+
+EXEC_WORKFLOW_FLAG_LABELS = [
+    ARTICLE_FLAG_LABEL, 
+    DELETE_FLAG_LABEL,
+    PROFILE_FLAG_LABEL
+    ]
+
+ISSUE_PATH = 'issue'
+
+NEXTJS_BASE_PATH = './githubio/src'
+MD_DIR = f'{NEXTJS_BASE_PATH}/contents'
+CONSTS_DIR = f'{NEXTJS_BASE_PATH}/consts'
+PUBLIC_DIR = f'{NEXTJS_BASE_PATH}/public'
+IMAGES_DIR = f'{PUBLIC_DIR}/static/images'
+IMAGES_DIR_PRD = f'/static/images'
+
+MAX_IMAGE_WIDTH = 550
