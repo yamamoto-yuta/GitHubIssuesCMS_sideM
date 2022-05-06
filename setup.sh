@@ -28,3 +28,11 @@ fi
 cp -i ./templates/article.md ./.github/ISSUE_TEMPLATE/article.md
 cp -i ./templates/article_reserve.md ./.github/ISSUE_TEMPLATE/article_reserve.md
 cp -i ./templates/profile.md ./.github/ISSUE_TEMPLATE/profile.md
+
+if [ -f ./.github/ISSUE_TEMPLATE/feature_request.md ]; then
+    rm ./ISSUE_TEMPLATE/feature_request.md
+fi
+if [ -f ./.github/ISSUE_TEMPLATE/bug_report.md ]; then
+    rm ./ISSUE_TEMPLATE/bug_report.md
+fi
+
