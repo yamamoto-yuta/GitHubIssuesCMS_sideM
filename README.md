@@ -7,6 +7,7 @@ GitHub Issues driven Contents Management System side Manager
 
 ## sideF
 1. Fork [sideF](https://github.com/ShotaroKataoka/GitHubIssuesCMS_sideF)
+1. Settings -> Actions -> General -> Workflow permissions -> check "Read and write permissions"
 1. Setup sideF
 
 ## sideM
