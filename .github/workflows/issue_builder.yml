@@ -1,0 +1,56 @@
+name: Build_Markdown_from_Issue
+
+on:
+  issues:
+    types: closed
+
+jobs:
+  build_md:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v2
+
+    - name: get_issue
+      env:
+        TITLE: ${{ github.event.issue.title }}
+        ISSUE_ID: ${{ github.event.issue.number }}
+        BODY: ${{ github.event.issue.body }}
+        LABELS: ${{ toJson(github.event.issue.labels) }}
+        CLOSED_AT: ${{ github.event.issue.closed_at }}
+        STATUS: ${{ github.event.action }}
+      run: |
+        mkdir issue
+        echo "${TITLE}" >| issue/title.txt
+        echo "${ISSUE_ID}" >| issue/issue_id.txt
+        echo "${BODY}" >| issue/body.txt
+        echo "${LABELS}" >| issue/labels.txt
+        echo "${CLOSED_AT}" >| issue/closed_at.txt
+        echo "${STATUS}" >| issue/status.txt
+
+    - name: Install Package
+      run: pip install -r requirements.txt
+
+    - name: Check Publish flag
+      run: python3 check.py
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        repository: ShotaroKataoka/GitHubIssuesCMS_sideF
+        path: githubio
+        ref: main
+
+    - name: build markdown
+      run: python3 build.py
+
+    - name: Push
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-directory: githubio/src
+        destination-github-username: 'ShotaroKataoka'
+        destination-repository-name: 'GitHubIssuesCMS_sideF'
+        user-email: s183347@stn.nagaokaut.ac.jp
+        target-branch: main
+        target-directory: src
