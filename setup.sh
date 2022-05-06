@@ -13,8 +13,7 @@ if [ ! -d ./.github/workflows ]; then
     mkdir ./.github/workflows
 fi
 if [ -e ./.github/workflows/issue_builder.yml ]; then
-    echo './.github/workflows/issue_builder.yml already exists.'
-    read -p "overwrite? (y/n) > " prompt;
+    read -p "cp: overwrite './.github/workflows/issue_builder.yml'? " prompt;
     if [ $prompt = 'y' ]; then
         echo "$workflow" >| ./.github/workflows/issue_builder.yml
     fi
@@ -22,4 +21,10 @@ else
     echo "$workflow" >| ./.github/workflows/issue_builder.yml
 fi
 
-
+# copy 
+if [ ! -d ./.github/ISSUE_TEMPLATE ]; then
+    mkdir ./.github/ISSUE_TEMPLATE
+fi
+cp -i ./templates/article.md ./.github/ISSUE_TEMPLATE/article.md
+cp -i ./templates/article_reserve.md ./.github/ISSUE_TEMPLATE/article_reserve.md
+cp -i ./templates/profile.md ./.github/ISSUE_TEMPLATE/profile.md
