@@ -18,3 +18,5 @@ GitHub Issues driven Contents Management System side Manager
 1. Exec `git add .`
 1. Exec `git commit -m 'exec first setup.sh'`
 1. Exec `git push origin main` (push to main branch of your repository)
+1. Setting Labels on GitHub Repository.
+  1. Create `article` and `profile` labels.
