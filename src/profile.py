@@ -18,7 +18,7 @@ def profile_build():
     if profile is None:
         profile = Profile()
 
-    profile.set_profile(issue.body)
+    profile.set_profile(issue.fm)
 
     profile.save()
 

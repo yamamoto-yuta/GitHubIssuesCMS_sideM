@@ -48,7 +48,8 @@ class Profile():
         return yaml.safe_load(parsed)
 
     def set_profile(self, yaml_string):
-        self.profile = self._load_yaml(yaml_string)
+        #self.profile = self._load_yaml(yaml_string)
+        self.profile = yaml_string
 
     def save(self):
         if not os.path.exists(CONSTS_DIR):

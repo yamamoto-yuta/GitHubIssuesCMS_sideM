@@ -11,6 +11,16 @@ GitHub Issues driven Contents Management System side Manager
 
 ## sideM
 1. Fork this repository (Can be named arbitrarily)
+1. Setting Personal Access Token
+  1. Settings
+  1. Developper settings
+  1. Personal access tokens
+  1. Generate New token
+  1.  `public_repo`
+  1. check `public_repo`
+  1. Copy Token
+1. Set token to sideM secrets
+  1. 
 1. Clone forked sideM repository
 1. Exec `./init_config.sh`
 1. Edit `settings.config`
