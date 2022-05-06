@@ -10,7 +10,7 @@ GitHub Issues driven Contents Management System side Manager
 1. setup sideF
 
 ## sideM
-1. Fork this repository
+1. Fork this repository (Can be named arbitrarily)
 1. clone forked sideM repository
 1. exec `./init_config.sh`
 1. edit `settings.config`
