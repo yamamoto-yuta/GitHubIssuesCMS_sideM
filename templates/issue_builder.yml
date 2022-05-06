@@ -33,24 +33,24 @@ jobs:
     - name: Check Publish flag
       run: python3 check.py
 
-    - name: Checkout ShotaroKataoka.github.io
+    - name: Checkout
       uses: actions/checkout@v2
       with:
-        repository: ShotaroKataoka/ShotaroKataoka.github.io
+        repository: T_GITHUB_USER_NAME/T_FRONTEND_REPOSITORY
         path: githubio
         ref: main
 
     - name: build markdown
       run: python3 build.py
 
-    - name: Pushes to ShotaroKataoka.github.io
+    - name: Push
       uses: cpina/github-action-push-to-another-repository@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source-directory: githubio/src
-        destination-github-username: 'ShotaroKataoka'
-        destination-repository-name: 'ShotaroKataoka.github.io'
-        user-email: s183347@stn.nagaokaut.ac.jp
+        destination-github-username: 'T_GITHUB_USER_NAME'
+        destination-repository-name: 'T_FRONTEND_REPOSITORY'
+        user-email: T_GITHUB_USER_EMAIL
         target-branch: main
         target-directory: src

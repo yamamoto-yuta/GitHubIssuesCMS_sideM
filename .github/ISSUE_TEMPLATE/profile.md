@@ -7,22 +7,26 @@ assignees: ''
 
 ---
 ```yaml
-blog_title: Kataoka's Blog
-author_name: かたおか
-author_description: かたおかです。アイコンはみかん。
-copylight_name: Shotaro Kataoka
-copylight_url: https://github.com/ShotaroKataoka
+blog_title: ENTER_TITLE_of_YOUR_BLOG
+author_name: ENTER_YOUR_NICK_NAME
+author_description: ENTER_YOUR_SHORT_INTRODUCTION
+copylight_name: ENTER_YOUR_NAME (for copyright component)
+copylight_url: ENTER_YOUR_URL (for copyright component)
+
+# Please rewrite your SNS url
+# This is an ordered SNS list
+# Unnecessary items can be deleted (or commented out)
 sns:
   - name: GitHub
-    url: https://github.com/ShotaroKataoka
+    url: https://
   - name: Twitter
-    url: https://twitter.com/KataokaShotaro
+    url: https://
   - name: Facebook
-    url: https://www.facebook.com/profile.php?id=100014221270440
+    url: https://
   - name: LinkedIn
-    url: https://www.linkedin.com/in/shotarokataoka/
+    url: https://
   - name: Instagram
-    url: https://www.instagram.com/s.kataoka_
+    url: https://
   - name: YouTube
-    url: https://www.youtube.com/channel/UCQI7bgZdPsE4WO9-lonvgdA
+    url: https://
 ```
