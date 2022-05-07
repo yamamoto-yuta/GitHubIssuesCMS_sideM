@@ -109,7 +109,7 @@ def article_build():
     if profile is not None:
         if 'url_subpath' in profile.keys():
             base_path = profile['url_subpath']
-    resource.set_resources(external_links=external_links, image_links=image_links, base_path)
+    resource.set_resources(external_links=external_links, image_links=image_links, base_path=base_path)
 
     """ OGPと画像を取得 """
     resource.dl_resources()
