@@ -12,7 +12,7 @@ from const import CONSTS_DIR, IMAGES_DIR, IMAGES_DIR_PRD, MAX_IMAGE_WIDTH
 EXTERNAL_METADATA = f"{CONSTS_DIR}/external_metadata.json"
 
 class Resource():
-    def __init__(self, external_links, image_links, base_path):
+    def __init__(self, external_links, image_links, base_path=''):
         self.external_links = external_links
         self.image_links = image_links
         self.base_path = base_path
