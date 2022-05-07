@@ -12,9 +12,10 @@ from const import CONSTS_DIR, IMAGES_DIR, IMAGES_DIR_PRD, MAX_IMAGE_WIDTH
 EXTERNAL_METADATA = f"{CONSTS_DIR}/external_metadata.json"
 
 class Resource():
-    def __init__(self, external_links, image_links):
+    def __init__(self, external_links, image_links, base_path):
         self.external_links = external_links
         self.image_links = image_links
+        self.base_path = base_path
 
     @classmethod
     def load_resources(self):
@@ -45,7 +46,7 @@ class Resource():
         extension = '.' + url.split('.')[-1]
         file_name = hashlib.md5(url.encode()).hexdigest() + extension
         dst_path = f'{IMAGES_DIR}/article/' + file_name
-        dst_prd_path = f'{IMAGES_DIR_PRD}/article/'+file_name
+        dst_prd_path = f'{self.base_path}{IMAGES_DIR_PRD}/article/'+file_name
         try:
             dst_dir = '/'.join(dst_path.split('/')[:-1])
             if not os.path.exists(dst_dir):

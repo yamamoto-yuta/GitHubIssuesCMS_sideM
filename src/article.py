@@ -88,6 +88,9 @@ def article_build():
     """
     article.format_url()
 
+    """ 設定パラメータの読み込み """
+    profile = Profile.load_profile()
+
     """ --- 外部リソースの取得 --- 
     - 外部リンクのOGP取得
     - 画像データの取得
@@ -102,7 +105,11 @@ def article_build():
         external_links[url] = {}
     for url in article.images:
         image_links[url] = {}
-    resource.set_resources(external_links=external_links, image_links=image_links)
+    base_path = ''
+    if profile is not None:
+        if 'url_subpath' in profile.keys():
+            base_path = profile['url_subpath']
+    resource.set_resources(external_links=external_links, image_links=image_links, base_path)
 
     """ OGPと画像を取得 """
     resource.dl_resources()
@@ -119,7 +126,6 @@ def article_build():
     params = {}
     params['ogp_icon_img_path'] = IMAGES_DIR+'/avatar/avatar.png'
     params['title_text'] = article.title
-    profile = Profile.load_profile()
     if profile is None:
         params['author_text'] = ''
     else:
