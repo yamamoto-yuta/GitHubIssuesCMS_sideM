@@ -9,6 +9,7 @@ GitHub Issues driven Contents Management System side Manager
 1. Fork [sideF](https://github.com/ShotaroKataoka/GitHubIssuesCMS_sideF)
 1. Settings -> Actions -> General -> Workflow permissions -> check "Read and write permissions"
 1. Settings -> Pages -> Source branch "build" "/(root)" 
+1. sub dir (next.config.js)
 
 ## sideM
 1. Fork this repository (Can be named arbitrarily)

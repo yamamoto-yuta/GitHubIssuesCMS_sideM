@@ -1,5 +1,6 @@
 import os
 import json
+from urllib.parse import urlparse
 
 import yaml
 
@@ -16,6 +17,7 @@ class Profile():
                 "author_description": string
                 "copylight_name": string
                 "copylight_url": string
+                "root_url": string
                 "sns": List of Dict
                     List:
                         Dict:
@@ -39,17 +41,16 @@ class Profile():
     def keys(self):
         return self.profile.keys()
 
-    def _load_yaml(self, yaml_string):
-        parsed = ""
-        for text in yaml_string.split('\n'):
-            if text == "```" or text == "```yaml" or text == "```yml":
-                continue
-            parsed += f"{text}\n"
-        return yaml.safe_load(parsed)
+    def set_profile(self, yaml_dict):
+        self.profile = yaml_dict
+        self._split_root_url()
 
-    def set_profile(self, yaml_string):
-        #self.profile = self._load_yaml(yaml_string)
-        self.profile = yaml_string
+    def _split_root_url(self):
+        root_url = self.profile['root_url']
+        parsed = urlparse(root_url)
+        self.profile['url_scheme'] = parsed.scheme
+        self.profile['url_domain'] = parsed.netloc
+        self.profile['url_subpath'] = parsed.path
 
     def save(self):
         if not os.path.exists(CONSTS_DIR):
