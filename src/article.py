@@ -87,13 +87,17 @@ def article_build():
     if profile is not None:
         if 'url_subpath' in profile.keys():
             base_path = profile['url_subpath']
+    root_url = ''
+    if profile is not None:
+        if 'root_url' in profile.keys():
+            root_url = profile['root_url']
 
     """ URLに関する処理
     - issue linkをURLに変換
     - RAW URLをパースしてarticle.urlsにリストで保存
     - Image URLをパースしてarticle.imagesにリストで保存
     """
-    article.format_url(base_path)
+    article.format_url(base_path, root_url)
 
     """ --- 外部リソースの取得 --- 
     - 外部リンクのOGP取得
