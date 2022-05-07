@@ -81,15 +81,19 @@ def article_build():
                     description=issue.ogp_description,
                 )
 
+    """ 設定パラメータの読み込み """
+    profile = Profile.load_profile()
+    base_path = ''
+    if profile is not None:
+        if 'url_subpath' in profile.keys():
+            base_path = profile['url_subpath']
+
     """ URLに関する処理
     - issue linkをURLに変換
     - RAW URLをパースしてarticle.urlsにリストで保存
     - Image URLをパースしてarticle.imagesにリストで保存
     """
-    article.format_url()
-
-    """ 設定パラメータの読み込み """
-    profile = Profile.load_profile()
+    article.format_url(base_path)
 
     """ --- 外部リソースの取得 --- 
     - 外部リンクのOGP取得
@@ -105,10 +109,6 @@ def article_build():
         external_links[url] = {}
     for url in article.images:
         image_links[url] = {}
-    base_path = ''
-    if profile is not None:
-        if 'url_subpath' in profile.keys():
-            base_path = profile['url_subpath']
     resource.set_resources(external_links=external_links, image_links=image_links, base_path=base_path)
 
     """ OGPと画像を取得 """

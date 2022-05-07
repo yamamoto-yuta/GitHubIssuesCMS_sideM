@@ -108,14 +108,14 @@ class Article():
         output = f"---\n{fm}\n---\n{md}"
         return output
 
-    def _replace_issue_link(self):
+    def _replace_issue_link(self, base_path):
         pattern1 = r'^\s*#(\d+)[^\S\n\r]*$'
         pattern2 = r'\[(.+)\]\(#(\d+)[^\S\n\r]*\)'
         ARTICLE_URL = 'https://shotarokataoka.github.io/article/'
         texts = []
         for text in self.markdown.split('\n'):
-            text = re.sub(pattern1, ARTICLE_URL+r'\1', text)
-            texts += [re.sub(pattern2, r'[\1]('+ARTICLE_URL+r'\2)' ,text)]
+            text = re.sub(pattern1, r'<p slug=\1 basePath='+f'"{base_path}"></p>', text)
+            texts += [re.sub(pattern2, r'[\1]('+f'{base_path}/article/'+r'\2)' ,text)]
         self.markdown = "\n".join(texts)
 
     def _parse_raw_url(self):
@@ -135,8 +135,8 @@ class Article():
                 images += [re.sub(pattern, r'\1', text)]
         self.images = images
 
-    def format_url(self):
-        self._replace_issue_link()
+    def format_url(self, base_path):
+        self._replace_issue_link(base_path)
         self._parse_raw_url()
         self._parse_image_url()
 
