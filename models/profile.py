@@ -43,7 +43,14 @@ class Profile():
 
     def set_profile(self, yaml_dict):
         self.profile = yaml_dict
+        self._sanitize_root_url()
         self._split_root_url()
+
+    def _sanitize_root_url():
+        url = self.profile['root_url']
+        if url[-1]!='/':
+            url += '/'
+        self.profile['root_url'] = url
 
     def _split_root_url(self):
         root_url = self.profile['root_url']
