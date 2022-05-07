@@ -48,8 +48,8 @@ class Profile():
 
     def _sanitize_root_url():
         url = self.profile['root_url']
-        if url[-1]!='/':
-            url += '/'
+        if url[-1]=='/':
+            url = url[:-1]
         self.profile['root_url'] = url
 
     def _split_root_url(self):
