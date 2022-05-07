@@ -27,11 +27,13 @@ class Resource():
         image_links = {}
         return Resource(external_links, image_links)
 
-    def set_resources(self, external_links={}, image_links={}):
+    def set_resources(self, external_links={}, image_links={}, base_path=''):
         for key in external_links.keys():
             self.external_links[key] = external_links[key]
         for key in image_links.keys():
             self.image_links[key] = image_links[key]
+        if base_path != '':
+            self.base_path = base_path
 
     def dl_resources(self):
         self._dl_external_links()
