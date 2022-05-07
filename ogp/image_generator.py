@@ -6,6 +6,7 @@ from ogp.design.kill_la_kill import KillLaKillDesign
 from ogp.design.image import ImageDesign
 
 def create_ogp_image(theme, params, thumbnail_save_path):
+    print(theme)
     if theme=='kill_la_kill':
         design = KillLaKillDesign(params)
     if re.match(r"https?://[a-zA-Z\d!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+", theme):

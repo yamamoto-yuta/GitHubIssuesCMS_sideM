@@ -121,8 +121,8 @@ class Article():
         pattern = r'^\s*https?:\/\/\S+[^\S\n\r]*$'
         urls = []
         for text in self.markdown.split('\n'):
-            is_match = re.match(pattern, text) and root_url not in text
-            if is_match:
+            is_match = re.match(pattern, text)
+            if is_match and (root_url not in text):
                 urls += [text]
         self.urls = urls
 
