@@ -10,7 +10,7 @@ def create_ogp_image(theme, params, thumbnail_save_path):
     if theme=='kill_la_kill':
         print('use KillLaKill Design')
         design = KillLaKillDesign(params)
-    if re.match(r"https?://[a-zA-Z\d!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+", theme):
+    elif re.match(r"https?://[a-zA-Z\d!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+", theme):
         print('use Image Design')
         params['url'] = theme
         design = ImageDesign(params)
