@@ -120,7 +120,7 @@ class Profile():
 
     def save_base_path(self):
         base_path = self.profile['url_subpath']
-        if base_path = '/':
+        if base_path == '/':
             base_path = ''
         with open(f"{NEXTJS_BASE_PATH}/next.config.js", 'r') as f:
             config = f.read().split('\n')
