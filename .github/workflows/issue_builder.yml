@@ -28,9 +28,7 @@ jobs:
         echo "${STATUS}" >| issue/status.txt
 
     - name: Install Package
-      run: |
-        source env/bin/activate
-        pip install -r requirements.txt
+      run: pip install -r requirements.txt
 
     - name: Check Publish flag
       run: python3 check.py
