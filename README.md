@@ -21,7 +21,7 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. Set token to sideM secrets
     1. (Forked Repository) Settings -> Secrets -> Actions
     1. New repository secret
-    2. Name: `API_TOKEN_GITHUB`, Value {Personal Access Token}
+    2. Name: `API_TOKEN_GITHUB`, Value {Copied Personal Access Token}
     3. Add secret
 1. Clone forked sideM repository
 1. Exec `./init_config.sh`
