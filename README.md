@@ -36,17 +36,20 @@ GitHub Issues driven Contents M@nagement System side Manager
     1. New Issue & use "Profile" template
     1. Edit all values. (`root_url` will be known later), so this can be blank.
     1. Create & Close issue.
-    1. Wait Actions end.
+    1. Wait sideM GitHub Actions end.
 
 ## sideF
-1. Wait Actions end.
+1. Wait sideF GitHub Actions end. (This process may fail, but that is not a problem.)
 1. (Forked Repository) Settings -> Pages -> Source branch "build" "/(root)" 
 1. Copy URL `Your site is ready to be published at {URL}`
 
 ## sideM
 1. Edit Closed Profile issue.
     1. Set copied URL to `root_url`.
+    1. Then, Reopen & Close this issue. 
+    1. Wait sideM & sideF GitHub Actions end. (This process may fail, but that is not a problem.)
 1. Create Your first post.
     1. New Issue & use "Article" template
-    1. You can add label as article tag. (named `tag/{tag_name}` label will be article tag.)
+    1. You can add custom labels as article tag. (named `tag/{tag_name}` label will be article tag.)
     1. Write Issue markdown with yaml frontmatter & Close
+    1. Wait sideM & sideF GitHub Actions end. (If this process succeeds, the article page is updated.)
