@@ -13,6 +13,7 @@ author_description: ENTER_YOUR_SHORT_INTRODUCTION
 copylight_name: ENTER_YOUR_NAME (for copyright component)
 copylight_url: ENTER_YOUR_URL (for copyright component)
 root_url: ROOT_URL_OF_YOUR_FRONTEND_PAGE(index page)
+issues_edit_page: ISSUES_PAGE_of_YOUR_sideM (e.g. https://github.com/ShotaroKataoka/GitHubIssuesCMS_sideM/issues)
 
 # Please rewrite your SNS url
 # This is an ordered SNS list

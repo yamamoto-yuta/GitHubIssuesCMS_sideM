@@ -43,14 +43,18 @@ class Profile():
 
     def set_profile(self, yaml_dict):
         self.profile = yaml_dict
-        self._sanitize_root_url()
+        self._sanitize_url()
         self._split_root_url()
 
-    def _sanitize_root_url():
+    def _sanitize_url(self):
+        self.profile['root_url'] = self._strip_last_slash(self.profile['root_url'])
+        self.profile['issues_edit_page'] = self._strip_last_slash(self.profile['issues_edit_page'])
+
+    def _strip_last_slash(self, url):
         url = self.profile['root_url']
         if url[-1]=='/':
             url = url[:-1]
-        self.profile['root_url'] = url
+        return url
 
     def _split_root_url(self):
         root_url = self.profile['root_url']
