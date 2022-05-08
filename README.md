@@ -6,11 +6,11 @@ GitHub Issues driven Contents M@nagement System side Manager
 # Setup
 
 ## sideF
-1. Fork [sideF](https://github.com/ShotaroKataoka/GitHubIssuesCMS_sideF)
+1. Fork [sideF](https://github.com/ShotaroKataoka/GitHubIssuesCMS_sideF) (Can be named arbitrarily. Repository name will be your site URL.)
 1. (Forked Repository) Settings -> Actions -> General -> Workflow permissions -> check "Read and write permissions"
 
 ## sideM
-1. Fork this repository (Can be named arbitrarily. Repository name will be your site URL.)
+1. Fork this repository (Can be named arbitrarily.)
 1. Setting Personal Access Token
     1. (Personal) Settings -> Developper settings -> Personal access tokens
     1. Generate New token
