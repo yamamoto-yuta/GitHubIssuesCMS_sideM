@@ -1,4 +1,5 @@
 import os
+import io
 import json
 from urllib.parse import urlparse
 import urllib.request
