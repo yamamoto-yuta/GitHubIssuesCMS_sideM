@@ -51,5 +51,17 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. Create Your first post.
     1. New Issue & use "Article" template
     1. You can add `tag/` prefix labels to the issue; it become the article tags. (named `tag/{tag_name}` label will be article `{tag_name}` tag.)
-    1. Write Issue markdown with yaml frontmatter & Close
+    1. Write Issue markdown with YAML frontmatter & Close
     1. Wait sideM & sideF GitHub Actions end. (If this process succeeds, the article page is updated.)
+
+# How to manage contents
+## Post Articles
+1. Create issue on sideM with `Article` (or `Reserved Article`) template.
+1. Fill out YAML frontmatter follow a format.
+1. Fill in the body text in markdown under YAML.
+1. Clone issue and wait sideM & sideF GitHub Actions end.
+
+## Edit Articles (or Profile)
+1. Reopen the issue.
+1. Edit the issue content.
+1. Close the issue and wait sideM & sideF GitHub Actions end.
