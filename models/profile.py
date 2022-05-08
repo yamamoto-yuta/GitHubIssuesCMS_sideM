@@ -7,7 +7,7 @@ import urllib.request
 import yaml
 from PIL import Image
 
-from const import CONSTS_DIR, PUBLIC_DIR, IMAGES_DIR
+from const import CONSTS_DIR, PUBLIC_DIR, IMAGES_DIR, NEXTJS_BASE_PATH
 
 class Profile():
     """ Profile dict of used in blog.
@@ -20,7 +20,10 @@ class Profile():
                 "author_description": string
                 "copylight_name": string
                 "copylight_url": string
-                "root_url": string
+                "root_url": string (fullpath of sideF root)
+                "url_scheme": string (http or https)
+                "url_domain": string (domain of sideF)
+                "url_subpath": string (subpath of sideF root)
                 "sns": List of Dict
                     List:
                         Dict:
@@ -115,11 +118,26 @@ class Profile():
         img = self._format_img(img)
         return img
 
+    def save_base_path(self):
+        base_path = self.profile['url_subpath']
+        if base_path = '/':
+            base_path = ''
+        with open(f"{NEXTJS_BASE_PATH}/next.config.js", 'r') as f:
+            config = f.read().split('\n')
+        for i, conf in enumerate(config):
+            if "config['basePath'] = " in conf:
+                config[i] = f"config['basePath'] = '{base_path}'"
+        config = '\n'.join(config)
+        with open(f"{NEXTJS_BASE_PATH}/next.config.js", 'w') as f:
+            f.write(config)
+
     def save(self):
         if not os.path.exists(CONSTS_DIR):
             os.makedirs(CONSTS_DIR)
         with open(f'{CONSTS_DIR}/profile.json', 'w', encoding="utf-8") as f:
             json.dump(self.profile, f, indent=4, ensure_ascii=False)
+        
+        self.save_base_path()
 
         favicon_img = self.dl_img(self.profile['favicon_url'])
         self.save_img(favicon_img, PUBLIC_DIR+'/static', 'favicon', 'ico', sizes=[(16,16), (32, 32), (48, 48), (64,64)])
