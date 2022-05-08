@@ -113,6 +113,7 @@ class Profile():
     def dl_img(self, url):
         img = self._dl_img(url)
         img = self._format_img(img)
+        return img
 
     def save(self):
         if not os.path.exists(CONSTS_DIR):
