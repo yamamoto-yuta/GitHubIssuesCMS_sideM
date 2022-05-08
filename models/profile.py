@@ -62,7 +62,7 @@ class Profile():
         return url
 
     def _split_root_url(self):
-        if self.profile['root_url'] = '':
+        if self.profile['root_url'] == '':
             self.profile['root_url'] = 'https://shotarokataoka.github.io/'
         root_url = self.profile['root_url']
         parsed = urlparse(root_url)
