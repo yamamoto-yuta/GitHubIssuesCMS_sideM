@@ -82,9 +82,9 @@ class Profile():
         except urllib.error.URLError as e:
             print(e)
 
-    def _format_img(self, img):
+    def _format_img(self, img, size):
         img = self._crop_img(img)
-        img = self._resize_img(img)
+        img = self._resize_img(img, size)
         return img
 
     def _crop_img(self, img):
@@ -100,9 +100,9 @@ class Profile():
                          (w + crop_w) // 2,
                          (h + crop_h) // 2))
 
-    def _resize_img(self, img):
-        resize_w = 64
-        resize_h = 64
+    def _resize_img(self, img, size):
+        resize_w = size
+        resize_h = size
         w, h = img.width, img.height
         if resize_w > w or resize_h > h:
             resize_w = w
@@ -118,9 +118,9 @@ class Profile():
         else:
             img.save(f'{save_dir}/{file_name}.{img_format}')
 
-    def dl_img(self, url):
+    def dl_img(self, url, size=64):
         img = self._dl_img(url)
-        img = self._format_img(img)
+        img = self._format_img(img, size)
         return img
 
     def save_base_path(self):
@@ -148,4 +148,6 @@ class Profile():
         self.save_img(favicon_img, PUBLIC_DIR+'/static', 'favicon', 'ico', sizes=[(16,16), (32, 32), (48, 48), (64,64)])
         avatar_img = self.dl_img(self.profile['avatar_url'])
         self.save_img(avatar_img, IMAGES_DIR+'/avatar', 'avatar', 'webp')
+        avatar_img = self.dl_img(self.profile['avatar_url'], 300)
+        self.save_img(avatar_img, IMAGES_DIR+'/avatar', 'avatar', 'png')
 
