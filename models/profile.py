@@ -51,7 +51,6 @@ class Profile():
         self.profile['issues_edit_page'] = self._strip_last_slash(self.profile['issues_edit_page'])
 
     def _strip_last_slash(self, url):
-        url = self.profile['root_url']
         if url[-1]=='/':
             url = url[:-1]
         return url
