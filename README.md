@@ -34,7 +34,7 @@ GitHub Issues driven Contents M@nagement System side Manager
     1. Create `article` and `profile` labels.
 1. Create&Edit&Close Profile Issue on Forked sideM Repository.
     1. New Issue & use "Profile" template
-    1. Edit all values. (`root_url` will be known later), so this can be blank.
+    1. Edit all values. (`root_url` will be known later, so this can be blank.)
     1. Create & Close issue.
     1. Wait sideM GitHub Actions end.
 
