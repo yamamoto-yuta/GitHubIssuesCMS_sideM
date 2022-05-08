@@ -1,5 +1,5 @@
 # GitHubIssuesCMS_sideM
-GitHub Issues driven Contents Management System side Manager
+GitHub Issues driven Contents M@nagement System side Manager
 
 
 
