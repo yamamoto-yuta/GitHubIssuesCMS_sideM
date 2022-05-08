@@ -3,6 +3,7 @@ import io
 import json
 from urllib.parse import urlparse
 import urllib.request
+import re
 
 import yaml
 from PIL import Image
@@ -62,7 +63,9 @@ class Profile():
         return url
 
     def _split_root_url(self):
-        if self.profile['root_url'] == '':
+        if self.profile['root_url'] is None:
+            self.profile['root_url'] = 'https://shotarokataoka.github.io/'
+        if not re.match(r"https?://[a-zA-Z\d!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+", self.profile['root_url']):
             self.profile['root_url'] = 'https://shotarokataoka.github.io/'
         root_url = self.profile['root_url']
         parsed = urlparse(root_url)
