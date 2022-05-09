@@ -39,7 +39,9 @@ GitHub Issues driven Contents M@nagement System side Manager
     1. Create `article` and `profile` labels.
 1. Create&Edit&Close Profile Issue on Forked sideM Repository.
     1. New Issue & use "Profile" template
-    1. Edit all values. (`root_url` will be known later, so this can be blank.)
+    1. Edit all values.
+        1. If `{Your sideF repository name}` is `"<your_user_name>.github.io"`, set `root_url` value to `https://<your user name>.github.io`.  
+           Else, set `root_url` value to `https://<your user name>.github.io/{Your sideF repository name}`
     1. Create & Close issue.
     1. Wait sideM GitHub Actions end.
 
@@ -49,10 +51,6 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. Copy URL `Your site is ready to be published at {URL}`
 
 ## sideM
-1. Edit Closed Profile issue.
-    1. Set copied URL to `root_url`.
-    1. Then, Reopen & Close this issue. 
-    1. Wait sideM & sideF GitHub Actions end. (This process may fail, but that is not a problem.)
 1. Create Your first post.
     1. New Issue & use "Article" template
     1. You can add `tag/` prefix labels to the issue; it become the article tags. (named `tag/{tag_name}` label will be article `{tag_name}` tag.)
