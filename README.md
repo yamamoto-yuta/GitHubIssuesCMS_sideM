@@ -30,9 +30,9 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. Exec `./init_config.sh`
 1. Edit `settings.config`
 1. Exec `./setup.sh`
-1. Exec `git add .`
-1. Exec `git commit -m 'exec first setup.sh'`
-1. Exec `git push origin main` (push to main branch of your repository)
+1. `git add .`  
+   `git commit -m 'exec first setup.sh'`  
+   `git push origin main` (push to main branch of your repository)
 1. Setting Labels on Forked sideM Repository.
     1. Create `article` and `profile` labels.
 1. Create&Edit&Close Profile Issue on Forked sideM Repository.
