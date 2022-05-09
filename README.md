@@ -42,7 +42,7 @@ GitHub Issues driven Contents M@nagement System side Manager
     1. Edit all values.
         1. If `{Your sideF repository name}` is `"<your_user_name>.github.io"`, set the value of `root_url` to `https://<your user name>.github.io`.  
            Else, set the value of `root_url` to `https://<your user name>.github.io/{Your sideF repository name}`
-    1. Create & Close issue.
+    1. Create & Close issue. (Rest assured that each value can be re-set at any time by re-closing.)
     1. Wait sideM GitHub Actions end.
 
 ## sideF
