@@ -29,6 +29,8 @@ GitHub Issues driven Contents M@nagement System side Manager
    `cd ./{Your repository name}`
 1. Exec `./init_config.sh`
 1. Edit `settings.config`
+    1. Please make sure your name and email address are correct.
+    1. Set "FRONTEND_REPOSITORY" to the name of your sideF repository that you just forked.
 1. Exec `./setup.sh`
 1. `git add .`  
    `git commit -m 'exec first setup.sh'`  
