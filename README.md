@@ -2,7 +2,6 @@
 GitHub Issues driven Contents M@nagement System side Manager
 
 
-
 # Setup
 
 ## sideF
@@ -12,7 +11,7 @@ GitHub Issues driven Contents M@nagement System side Manager
 ## sideM
 1. Create a new **private** repository on Github. (Memo repository name; `{Your repository name}`)
 1. `git clone --bare git@github.com:ShotaroKataoka/GitHubIssuesCMS_sideM.git ./{Your repository name}.git`  
-   `cd {Your repository name}`  
+   `cd {Your repository name}.git`  
    `git push --mirror git@github.com:<your_username>/{Your repository name}.git`
 1. `cd ..`  
    `rm -rf {Your repository name}.git`
