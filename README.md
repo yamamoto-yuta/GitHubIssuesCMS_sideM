@@ -15,7 +15,7 @@ GitHub Issues driven Contents M@nagement System side Manager
    `git push --mirror git@github.com:<your_username>/{Your repository name}.git`
 1. `cd ..`  
    `rm -rf {Your repository name}.git`
-1. Setting Personal Access Token
+1. Setting [Personal Access Token](https://docs.github.com/ja/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token)
     1. (Personal) Settings -> Developper settings -> Personal access tokens
     1. Generate New token
     1. Check `public_repo`
