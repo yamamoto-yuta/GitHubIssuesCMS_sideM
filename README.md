@@ -32,8 +32,8 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. Exec `./setup.sh`
 1. `git add .`  
    `git commit -m 'exec first setup.sh'`  
-   `git push origin main` (push to main branch of your repository)
-1. Setting Labels on Forked sideM Repository.
+   `git push origin main`
+1. [Create new Labels](https://docs.github.com/ja/issues/using-labels-and-milestones-to-track-work/managing-labels#creating-a-label) on your sideM Repository.
     1. Create `article` and `profile` labels.
 1. Create&Edit&Close Profile Issue on Forked sideM Repository.
     1. New Issue & use "Profile" template
