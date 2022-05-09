@@ -16,18 +16,18 @@ GitHub Issues driven Contents M@nagement System side Manager
    `git push --mirror git@github.com:<your_username>/{Your repository name}.git`
 1. `cd ..`  
    `rm -rf {Your repository name}`
-1. `git clone <your_username>/{Your repository name}.git`
 1. Setting Personal Access Token
     1. (Personal) Settings -> Developper settings -> Personal access tokens
     1. Generate New token
     1. Check `public_repo`
     1. Copy Token
-1. Set token to your sideM secrets
+1. Set token to your sideM repository secrets
     1. (Your sideM Repository) Settings -> Secrets -> Actions
     1. New repository secret
     2. Name: `API_TOKEN_GITHUB`, Value {Copied Personal Access Token}
     3. Add secret
-1. Clone forked sideM repository
+1. `git clone <your_username>/{Your repository name}.git`  
+   `cd ./{Your repository name}`
 1. Exec `./init_config.sh`
 1. Edit `settings.config`
 1. Exec `./setup.sh`
