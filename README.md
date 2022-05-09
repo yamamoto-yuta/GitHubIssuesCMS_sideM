@@ -48,7 +48,6 @@ GitHub Issues driven Contents M@nagement System side Manager
 ## sideF
 1. Wait sideF GitHub Actions end. (This process may fail, but that is not a problem.)
 1. (Your sideF Repository) Settings -> Pages -> Source branch `"build"` `"/(root)" `
-1. Copy URL `Your site is ready to be published at {URL}`
 
 ## sideM
 1. Create Your first post.
