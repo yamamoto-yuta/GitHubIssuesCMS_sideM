@@ -7,11 +7,10 @@ GitHub Issues driven Contents M@nagement System side Manager
 
 ## sideF
 1. Fork [sideF](https://github.com/ShotaroKataoka/GitHubIssuesCMS_sideF) (Can be named arbitrarily. Repository name will be your site URL.)
-1. Setting repository as `public`
 1. (Forked sideF Repository) Settings -> Actions -> General -> Workflow permissions -> check "Read and write permissions"
 
 ## sideM
-1. Create a new private repository on Github. (Memo repository name; `{Your repository name}`)
+1. Create a new **private** repository on Github. (Memo repository name; `{Your repository name}`)
 1. `git clone --bare git@github.com:ShotaroKataoka/GitHubIssuesCMS_sideM.git ./{Your repository name}`  
    `cd {Your repository name}`  
    `git push --mirror git@github.com:<your_username>/{Your repository name}.git`
