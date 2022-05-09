@@ -8,18 +8,23 @@ GitHub Issues driven Contents M@nagement System side Manager
 ## sideF
 1. Fork [sideF](https://github.com/ShotaroKataoka/GitHubIssuesCMS_sideF) (Can be named arbitrarily. Repository name will be your site URL.)
 1. Setting repository as `public`
-1. (Forked Repository) Settings -> Actions -> General -> Workflow permissions -> check "Read and write permissions"
+1. (Forked sideF Repository) Settings -> Actions -> General -> Workflow permissions -> check "Read and write permissions"
 
 ## sideM
-1. Fork this repository (Can be named arbitrarily.)
-1. Setting repository as `private`
+1. Create a new private repository on Github. (Memo repository name; `{Your repository name}`)
+1. `git clone --bare git@github.com:ShotaroKataoka/GitHubIssuesCMS_sideM.git ./{Your repository name}`  
+   `cd {Your repository name}`  
+   `git push --mirror git@github.com:<your_username>/{Your repository name}.git`
+1. `cd ..`
+   `rm -rf {Your repository name}`
+1. `git clone <your_username>/{Your repository name}.git`
 1. Setting Personal Access Token
     1. (Personal) Settings -> Developper settings -> Personal access tokens
     1. Generate New token
     1. Check `public_repo`
     1. Copy Token
-1. Set token to sideM secrets
-    1. (Forked Repository) Settings -> Secrets -> Actions
+1. Set token to your sideM secrets
+    1. (Your sideM Repository) Settings -> Secrets -> Actions
     1. New repository secret
     2. Name: `API_TOKEN_GITHUB`, Value {Copied Personal Access Token}
     3. Add secret
@@ -40,7 +45,7 @@ GitHub Issues driven Contents M@nagement System side Manager
 
 ## sideF
 1. Wait sideF GitHub Actions end. (This process may fail, but that is not a problem.)
-1. (Forked Repository) Settings -> Pages -> Source branch `"build"` `"/(root)" `
+1. (Your sideM Repository) Settings -> Pages -> Source branch `"build"` `"/(root)" `
 1. Copy URL `Your site is ready to be published at {URL}`
 
 ## sideM
