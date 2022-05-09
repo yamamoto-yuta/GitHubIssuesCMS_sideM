@@ -20,7 +20,7 @@ GitHub Issues driven Contents M@nagement System side Manager
     1. Generate New token
     1. Check `public_repo`
     1. Copy Token
-1. Set token to your sideM repository secrets
+1. Set token to your sideM repository [secrets](https://docs.github.com/ja/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
     1. (Your sideM Repository) Settings -> Secrets -> Actions
     1. New repository secret
     2. Name: `API_TOKEN_GITHUB`, Value {Copied Personal Access Token}
