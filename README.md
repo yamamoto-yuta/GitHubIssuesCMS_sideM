@@ -40,8 +40,8 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. Create&Edit&Close Profile Issue on Forked sideM Repository.
     1. New Issue & use "Profile" template
     1. Edit all values.
-        1. If `{Your sideF repository name}` is `"<your_user_name>.github.io"`, set `root_url` value to `https://<your user name>.github.io`.  
-           Else, set `root_url` value to `https://<your user name>.github.io/{Your sideF repository name}`
+        1. If `{Your sideF repository name}` is `"<your_user_name>.github.io"`, set the value of `root_url` to `https://<your user name>.github.io`.  
+           Else, set the value of `root_url` to `https://<your user name>.github.io/{Your sideF repository name}`
     1. Create & Close issue.
     1. Wait sideM GitHub Actions end.
 
