@@ -45,8 +45,7 @@ class Resource():
             self._optimize_image(url)
 
     def _dl_image(self, url):
-        extension = '.' + url.split('.')[-1]
-        file_name = hashlib.md5(url.encode()).hexdigest() + extension
+        file_name = hashlib.md5(url.encode()).hexdigest()+'.png'
         dst_path = f'{IMAGES_DIR}/article/' + file_name
         dst_prd_path = f'{self.base_path}{IMAGES_DIR_PRD}/article/'+file_name
         try:
