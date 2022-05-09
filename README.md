@@ -23,7 +23,7 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. Set token to your sideM repository [secrets](https://docs.github.com/ja/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
     1. (Your sideM Repository) Settings -> Secrets -> Actions
     1. New repository secret
-    2. Name: `API_TOKEN_GITHUB`, Value {Copied Personal Access Token}
+    2. Name: `API_TOKEN_GITHUB`, Value: `{Copied Personal Access Token}`.
     3. Add secret
 1. `git clone <your_username>/{Your repository name}.git`  
    `cd ./{Your repository name}`
@@ -38,7 +38,7 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. [Create new Labels](https://docs.github.com/ja/issues/using-labels-and-milestones-to-track-work/managing-labels#creating-a-label) on your sideM Repository.
     1. Create `article` and `profile` labels.
 1. Create&Edit&Close Profile Issue on Forked sideM Repository.
-    1. New Issue & use "Profile" template
+    1. New Issue & use "Profile" template.
     1. Edit all values.
         1. If `{Your sideF repository name}` is `"<your_user_name>.github.io"`, set the value of `root_url` to `https://<your user name>.github.io`.  
            Else, set the value of `root_url` to `https://<your user name>.github.io/{Your sideF repository name}`
@@ -51,9 +51,9 @@ GitHub Issues driven Contents M@nagement System side Manager
 
 ## sideM
 1. Create Your first post.
-    1. New Issue & use "Article" template
+    1. New Issue & use "Article" template.
     1. You can add `tag/` prefix labels to the issue; it become the article tags. (named `tag/{tag_name}` issues label will be article `{tag_name}` tag.)
-    1. Write Issue markdown with YAML frontmatter & Close
+    1. Write Issue markdown with YAML frontmatter & Close. (Rest assured that each value can be re-set at any time by re-closing.)
     1. Wait sideM & sideF GitHub Actions end. (If this process succeeds, the article page is updated.)
 
 # How to manage contents
