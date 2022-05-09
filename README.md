@@ -14,7 +14,7 @@ GitHub Issues driven Contents M@nagement System side Manager
 1. `git clone --bare git@github.com:ShotaroKataoka/GitHubIssuesCMS_sideM.git ./{Your repository name}`  
    `cd {Your repository name}`  
    `git push --mirror git@github.com:<your_username>/{Your repository name}.git`
-1. `cd ..`
+1. `cd ..`  
    `rm -rf {Your repository name}`
 1. `git clone <your_username>/{Your repository name}.git`
 1. Setting Personal Access Token
